@@ -104,7 +104,7 @@
             "name": "[parameters('networkSecurityGroupName')]",
             "location": "[parameters('location')]",
             "properties": {
-                "securityRules": "[]"
+                "securityRules": []
             }
         },
         {
