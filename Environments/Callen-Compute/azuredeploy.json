@@ -19,12 +19,6 @@
         "virtualNetworkName": {
             "type": "String"
         },
-        "addressPrefixes": {
-            "type": "Array",
-            "defaultValue": [
-                "10.1.0.0/24"
-            ]
-        },
         "publicIpAddressName": {
             "type": "String"
         },
@@ -120,13 +114,17 @@
             "location": "[parameters('location')]",
             "properties": {
                 "addressSpace": {
-                    "addressPrefixes": "[parameters('addressPrefixes')]"
+                    "addressPrefixes": [
+                        "10.1.0.0/24"
+                    ]
                 },
                 "subnets": [
                     {
                         "name": "[parameters('subnetName')]",
                         "properties": {
-                            "addressPrefix": "[parameters('addressPrefixes')]"
+                            "addressPrefix": [
+                                "10.1.0.0/24"
+                            ]
                         }
                     }
                 ]
