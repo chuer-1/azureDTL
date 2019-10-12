@@ -12,10 +12,6 @@
         "networkSecurityGroupName": {
             "type": "String"
         },
-        "networkSecurityGroupRules": {
-            "type": "Array",
-            "defaultValue": []
-        },
         "subnetName": {
             "type": "String",
             "defaultValue": "default"
@@ -30,15 +26,7 @@
             ]
         },
         "subnets": {
-            "type": "Array",
-            "defaultValue": [
-                {
-                    "name": "default",
-                    "properties": {
-                        "addressPrefix": "10.1.0.0/24"
-                    }
-                }
-            ]
+            "type": "Array"
         },
         "publicIpAddressName": {
             "type": "String"
@@ -128,7 +116,7 @@
             "name": "[parameters('networkSecurityGroupName')]",
             "location": "[parameters('location')]",
             "properties": {
-                "securityRules": "[parameters('networkSecurityGroupRules')]"
+                "securityRules": "[]"
             }
         },
         {
