@@ -12,37 +12,28 @@
             "type": "String"
         },
         "networkSecurityGroupRules": {
-            "value": []
+            "type": "Array"
         },
         "subnetName": {
-            "value": "default"
+            "type": "String"
         },
         "virtualNetworkName": {
             "type": "String"
         },
         "addressPrefixes": {
-            "value": [
-                "10.1.0.0/24"
-            ]
+            "type": "Array"
         },
         "subnets": {
-            "value": [
-                {
-                    "name": "default",
-                    "properties": {
-                        "addressPrefix": "10.1.0.0/24"
-                    }
-                }
-            ]
+            "type": "Array"
         },
         "publicIpAddressName": {
             "type": "String"
         },
         "publicIpAddressType": {
-            "value": "Dynamic"
+            "type": "String"
         },
         "publicIpAddressSku": {
-            "value": "Basic"
+            "type": "String"
         },
         "virtualMachineName": {
             "type": "String"
@@ -51,10 +42,10 @@
             "type": "String"
         },
         "osDiskType": {
-            "value": "Premium_LRS"
+            "type": "String"
         },
         "virtualMachineSize": {
-            "value": "Standard_D2s_v3"
+            "type": "String"
         },
         "adminUsername": {
             "type": "String"
@@ -69,10 +60,10 @@
             "type": "String"
         },
         "diagnosticsStorageAccountType": {
-            "value": "Standard_LRS"
+            "type": "String"
         },
         "diagnosticsStorageAccountKind": {
-            "value": "Storage"
+            "type": "String"
         }
     },
     "variables": {
