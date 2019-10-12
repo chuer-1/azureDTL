@@ -14,26 +14,13 @@
                 "description": "Password for the Virtual Machine."
             }
         },
+        "virtualMachineName": {
+            "type": "string"
+        },
         "dnsLabelPrefix": {
             "type": "string",
             "metadata": {
                 "description": "Unique DNS Name for the Public IP used to access the Virtual Machine."
-            }
-        },
-        "windowsOSVersion": {
-            "type": "string",
-            "defaultValue": "2016-Datacenter",
-            "allowedValues": [
-                "2008-R2-SP1",
-                "2012-Datacenter",
-                "2012-R2-Datacenter",
-                "2016-Nano-Server",
-                "2016-Datacenter-with-Containers",
-                "2016-Datacenter",
-                "2019-Datacenter"
-            ],
-            "metadata": {
-                "description": "The Windows version for the VM. This will pick a fully patched image of this given Windows version."
             }
         },
         "location": {
@@ -44,19 +31,19 @@
             }
         },
         "osDiskType": {
-            "type": "String",
+            "type": "string",
             "defaultValue": "Premium_LRS"
         }
     },
     "variables": {
-        "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'sawinvm')]",
-        "nicName": "myVMNic",
+        "storageAccountName": "[concat(parameters('virtualMachineName'), 'storage')]",
+        "nicName": "[concat(parameters('virtualMachineName'), '-nic')]",
         "addressPrefix": "10.0.0.0/16",
         "subnetName": "Subnet",
         "subnetPrefix": "10.0.0.0/24",
-        "publicIPAddressName": "myPublicIP",
-        "vmName": "SimpleWinVM",
-        "virtualNetworkName": "MyVNET",
+        "publicIPAddressName": "[concat(parameters('virtualMachineName'), '-ip')]",
+        "vmName": "[parameters('virtualMachineName')]",
+        "virtualNetworkName": "[concat(parameters('virtualMachineName'), '-vnet')]",
         "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]"
     },
     "resources": [
@@ -141,7 +128,7 @@
             ],
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_A2"
+                    "vmSize": "Standard_D2s_v3"
                 },
                 "osProfile": {
                     "computerName": "[variables('vmName')]",
