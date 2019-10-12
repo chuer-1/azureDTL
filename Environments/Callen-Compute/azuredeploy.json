@@ -35,9 +35,6 @@
         "virtualMachineName": {
             "type": "string"
         },
-        "virtualMachineRG": {
-            "type": "string"
-        },
         "osDiskType": {
             "type": "string"
         },
@@ -51,9 +48,6 @@
             "type": "secureString"
         },
         "diagnosticsStorageAccountName": {
-            "type": "string"
-        },
-        "diagnosticsStorageAccountId": {
             "type": "string"
         },
         "diagnosticsStorageAccountType": {
