@@ -64,7 +64,7 @@
         }
     },
     "variables": {
-        "quickstartRepoRoot": "https://raw.githubusercontent.com/callentan/azure-quickstart-templates/callentan/",
+        "quickstartRepoRoot": "https://raw.githubusercontent.com/leovms/azure-quickstart-templates/master/",
         "clusterName": "[concat('sf-', toLower(uniqueString(resourceGroup().name)))]",
         "vaultName": "[concat('kv-', toLower(uniqueString(resourceGroup().name)))]",
         "vaultSecret": "ClusterCertificate",
