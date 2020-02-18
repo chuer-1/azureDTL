@@ -143,7 +143,7 @@
                         }
                     },
                     "imageReference": {
-                        "id": "/subscriptions/ac77c8bc-f7c9-4592-9682-c9b0f643f0c9/resourceGroups/sigcuseuap-galleryrg/providers/Microsoft.Compute/galleries/ctisigcuseuap/images/wins1809-wins1809-0"
+                        "id": "/subscriptions/ac77c8bc-f7c9-4592-9682-c9b0f643f0c9/resourceGroups/callenml0210-galleryRg/providers/Microsoft.Compute/galleries/ctitestingsig/images/centos8-template-CentOS8-APersonalFolder-0"
                     }
                 },
                 "networkProfile": {
