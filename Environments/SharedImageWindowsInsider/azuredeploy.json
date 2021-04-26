@@ -44,7 +44,9 @@
         "publicIPAddressName": "[concat(parameters('virtualMachineName'), '-ip')]",
         "vmName": "[parameters('virtualMachineName')]",
         "virtualNetworkName": "[concat(parameters('virtualMachineName'), '-vnet')]",
-        "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]"
+        "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
+        "enableHotpatching": false,
+        "patchMode": "AutomacticByOs"
     },
     "resources": [
         {
@@ -140,8 +142,8 @@
                         "enableAutomaticUpdates": true,
                         "provisionVmAgent": true,
                          "patchSettings": {
-                             "enableHotpatching": "[parameters('enableHotpatching')]",
-                             "patchMode": "[parameters('patchMode')]"
+                             "enableHotpatching": "[variables('enableHotpatching')]",
+                             "patchMode": "[variables('patchMode')]"
                          }
                     },
                 },
