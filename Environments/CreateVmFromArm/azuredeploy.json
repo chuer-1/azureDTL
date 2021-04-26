@@ -193,8 +193,12 @@
                     "adminPassword": "[parameters('adminPassword')]",
                     "windowsConfiguration": {
                         "enableAutomaticUpdates": true,
-                        "provisionVmAgent": true
-                    }
+                        "provisionVmAgent": true,
+                         "patchSettings": {
+                             "enableHotpatching": "[parameters('enableHotpatching')]",
+                             "patchMode": "[parameters('patchMode')]"
+                         }
+                    },
                 },
                 "diagnosticsProfile": {
                     "bootDiagnostics": {
