@@ -133,9 +133,17 @@
                     "vmSize": "Standard_DS1_v2"
                 },
                 "osProfile": {
-                    "computerName": "[variables('vmName')]",
+                    "computerName": "[parameters('virtualMachineName')]",
                     "adminUsername": "[parameters('adminUsername')]",
-                    "adminPassword": "[parameters('adminPassword')]"
+                    "adminPassword": "[parameters('adminPassword')]",
+                    "windowsConfiguration": {
+                        "enableAutomaticUpdates": true,
+                        "provisionVmAgent": true,
+                         "patchSettings": {
+                             "enableHotpatching": "[parameters('enableHotpatching')]",
+                             "patchMode": "[parameters('patchMode')]"
+                         }
+                    },
                 },
                 "storageProfile": {
                     "osDisk": {
