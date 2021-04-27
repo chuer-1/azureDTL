@@ -45,8 +45,6 @@
         "vmName": "[parameters('virtualMachineName')]",
         "virtualNetworkName": "[concat(parameters('virtualMachineName'), '-vnet')]",
         "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
-        "enableHotpatching": false,
-        "patchMode": "AutomacticByOs"
     },
     "resources": [
         {
@@ -140,11 +138,7 @@
                     "adminPassword": "[parameters('adminPassword')]",
                     "windowsConfiguration": {
                         "enableAutomaticUpdates": true,
-                        "provisionVmAgent": true,
-                        "patchSettings": {
-                             "enableHotpatching": "[variables('enableHotpatching')]",
-                             "patchMode": "[variables('patchMode')]"
-                        }
+                        "provisionVmAgent": true,                    
                     },
                 },
                 "storageProfile": {
