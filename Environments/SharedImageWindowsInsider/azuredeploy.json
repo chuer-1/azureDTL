@@ -141,10 +141,10 @@
                     "windowsConfiguration": {
                         "enableAutomaticUpdates": true,
                         "provisionVmAgent": true,
-                         "patchSettings": {
+                        "patchSettings": {
                              "enableHotpatching": "[variables('enableHotpatching')]",
                              "patchMode": "[variables('patchMode')]"
-                         }
+                        }
                     },
                 },
                 "storageProfile": {
