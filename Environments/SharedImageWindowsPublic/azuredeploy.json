@@ -145,7 +145,7 @@
                         }
                     },
                     "imageReference": {
-                        "id": "/subscriptions/ac77c8bc-f7c9-4592-9682-c9b0f643f0c9/resourceGroups/cti-insiders-rg/providers/Microsoft.Compute/galleries/cti_insiders_sig/images/win-specialized-disk"
+                        "id": "/subscriptions/55d19c66-7670-4546-be27-ffadf8879965/resourceGroups/CTI-LabTestResource/providers/Microsoft.Compute/galleries/ctisig/images/windowsig-WindowsGalleryReused-0"
                     }
                 },
                 "networkProfile": {
