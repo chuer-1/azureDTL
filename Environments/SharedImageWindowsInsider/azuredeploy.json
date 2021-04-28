@@ -137,11 +137,10 @@
                     "windowsConfiguration": {
                         "provisionVMAgent": true,
                         "enableAutomaticUpdates": true,
-                        "patchSettings": {
-                            "patchMode": "AutomaticByOS",
-                            "enableHotpatching": false
-                        }
                     },
+                    "secrets": [],
+                    "allowExtensionOperations": true,
+                    "requireGuestProvisionSignal": true
                 },
                 "storageProfile": {
                     "osDisk": {
