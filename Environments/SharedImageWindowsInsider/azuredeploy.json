@@ -172,7 +172,7 @@
     ],
     "outputs": {
         "hostname": {
-            "type": "string",
+            "type": "strings",
             "value": "[reference(variables('publicIPAddressName')).dnsSettings.fqdn]"
         }
     }
